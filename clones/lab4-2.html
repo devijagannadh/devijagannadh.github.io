@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  var y = document.forms["myForm"]["clzname"].value;
+  var z = document.forms["myForm"]["list"].value;
+  var g = document.forms["myForm"]["gender"].value;
+  var h = document.forms["myForm"]["email"].value;
+ var i = document.forms["myForm"]["mob"].value;  
+var letters= /^[A-Za-z]+$/;
+console.log(g)
+
+  if (x == "") {
+    alert("Name must be filled out");
+    
+  }
+
+
+else if (!(y.match(letters))) {
+    alert("Not Accepted - College name should be contain only char");
+    
+  }
+
+ else if (z == "") {
+    alert("Branch must be filled out");
+    
+  }
+
+else if (g == "") {
+    alert("Gender must be selcted");
+    
+  }
+
+
+else if (h == "") {
+    alert("Email must be filled");
+    
+  }
+
+else if (i == "") {
+    alert("Mobile Number must be filled");
+    
+  }
+
+
+
+}
+
+
+ 
+
+
+</script>
+</head>
+
+
+
+<body>
+
+<form name="myForm" onsubmit="return validateForm()" method="post">
+ NAME * : <input type="text" name="fname"><br><br>
+SEX * :  <input type="radio" name="gender"> Male
+	<input type="radio" name="gender"> FeMale
+<br><br>
+COLLEGE NAME * : <input type="text" name="clzname"><br><br>
+BRANCH * : 	<select id = "myList" name="list">
+               <option value = "">SELECT ONE</option>
+               <option value = "2">ECE</option>
+               <option value = "3">MECH</option>
+               <option value = "4">OTHER</option>
+             </select>
+<br><br>
+EMAIL ID * : <input type="email" name="email"><br><br>
+
+MOBILE NUMBER * : 	<input type="number" name="mob"><br><br>
+<br><br>
+
+<input type="submit">
+
+</form>
+
+</body>
+
+
+
+</html>
+
