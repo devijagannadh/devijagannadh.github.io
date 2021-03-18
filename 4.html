@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    NAME <input type="text" id="n"><br> <br>
+
+    <input type="submit" value="INSERT" onclick="fi()">
+    <input type="submit" value="DELETE" onclick="fd()">
+    <input type="submit" value="COLOR" onclick="fc()">
+
+    <ol id ="list">
+        <li>ROSE</li>
+        <li>LILY</li>
+        <li>JASMINE</li>
+    </ol>
+
+    <script>
+        let name = document.getElementById('n');
+        let li = document.getElementById('list');
+        let item = document.getElementsByTagName('li');
+
+
+        function fi() {
+            if (name.value != '') {
+                var node = document.createElement("li");
+  var textnode = document.createTextNode(name.value);
+  node.appendChild(textnode);
+ li.appendChild(node);
+
+            }
+        }
+
+
+        function fd() {
+      if(item.length>0)      
+li.removeChild(li.firstChild)
+
+            
+        }
+
+
+        function fc() {
+            
+            for(let i =0 ;i<item.length;i++)
+            {
+                if(i%2==0)
+                item[i].style.backgroundColor='blue';
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
